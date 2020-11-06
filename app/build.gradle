@@ -66,4 +66,8 @@ dependencies {
     //Coil
     implementation "dev.chrisbanes.accompanist:accompanist-coil:0.2.1"
 
+    //Animation
+    implementation "androidx.compose.animation:animation:1.0.0-alpha02"
+
+
 }

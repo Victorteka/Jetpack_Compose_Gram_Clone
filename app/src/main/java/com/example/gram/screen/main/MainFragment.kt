@@ -49,6 +49,7 @@ class MainFragment : Fragment() {
                         Crossfade(modifier = modifier, current = currentSection) {section ->
                             when(section){
                                 HomeSection.Home -> Home()
+                                HomeSection.Search -> Content(title = "Search")
                                 HomeSection.Add -> Content(title = "Add Post options")
                                 HomeSection.Favorite -> Content(title = "Favorite")
                                 HomeSection.Profile -> Content(title = "Profile")
@@ -109,6 +110,7 @@ private enum class HomeSection(
     val selectedIcon: Int
 ) {
     Home(com.example.gram.R.drawable.ic_outlined_home, com.example.gram.R.drawable.ic_filled_home),
+    Search(com.example.gram.R.drawable.ic_outlined_search, com.example.gram.R.drawable.ic_outlined_search),
     Add(com.example.gram.R.drawable.ic_outlined_add, com.example.gram.R.drawable.ic_outlined_add),
     Favorite(com.example.gram.R.drawable.ic_outlined_favorite, com.example.gram.R.drawable.ic_filled_favorite),
     Profile(com.example.gram.R.drawable.ic_outlined_reels, com.example.gram.R.drawable.ic_outlined_reels)
