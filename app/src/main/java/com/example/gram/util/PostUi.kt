@@ -89,8 +89,8 @@ private fun PostHeader(post: Post) {
             }
             Spacer(modifier = Modifier.width(10.dp))
             Text(text = post.user.userName, style = MaterialTheme.typography.subtitle2)
-            Icon(Icons.Filled.MoreVert)
         }
+        Icon(Icons.Filled.MoreVert)
     }
 }
 
@@ -148,19 +148,22 @@ private fun PostFooterIconSection(
         verticalGravity = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        AnimLikeButton(post = post, onLikeClick = onLikeToggle)
+       Row(verticalGravity = Alignment.CenterVertically) {
+           AnimLikeButton(post = post, onLikeClick = onLikeToggle)
 
-        PostIconButton {
-            Icon(imageResource(id = R.drawable.ic_outlined_comment))
-        }
+           PostIconButton {
+               Icon(imageResource(id = R.drawable.ic_outlined_comment))
+           }
 
+           PostIconButton {
+               Icon(imageResource(id = R.drawable.ic_dm))
+           }
+       }
         PostIconButton {
-            Icon(imageResource(id = R.drawable.ic_dm))
+            Icon(vectorResource(id = R.drawable.ic_outlined_bookmark))
         }
     }
-    PostIconButton {
-        Icon(vectorResource(id = R.drawable.ic_outlined_bookmark))
-    }
+
 }
 
 @Composable

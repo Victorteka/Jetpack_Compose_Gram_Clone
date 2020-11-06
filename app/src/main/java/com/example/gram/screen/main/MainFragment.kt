@@ -21,6 +21,7 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.style.TextAlign
 import com.example.gram.screen.home.Home
+import com.example.gram.screen.search.Search
 import com.example.gram.ui.GramTheme
 import com.example.gram.ui.bottomBarHeight
 import com.example.gram.ui.icon
@@ -49,7 +50,7 @@ class MainFragment : Fragment() {
                         Crossfade(modifier = modifier, current = currentSection) {section ->
                             when(section){
                                 HomeSection.Home -> Home()
-                                HomeSection.Search -> Content(title = "Search")
+                                HomeSection.Search -> Search()
                                 HomeSection.Add -> Content(title = "Add Post options")
                                 HomeSection.Favorite -> Content(title = "Favorite")
                                 HomeSection.Profile -> Content(title = "Profile")
