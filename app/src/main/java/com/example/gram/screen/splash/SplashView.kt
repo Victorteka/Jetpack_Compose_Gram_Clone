@@ -4,12 +4,15 @@ import androidx.compose.foundation.Box
 import androidx.compose.foundation.ContentGravity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.launchInComposition
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.unit.dp
 import com.example.gram.R
 import kotlinx.coroutines.delay
 
@@ -25,6 +28,7 @@ fun SplashView(modifier: Modifier = Modifier, loadNextScreen: () -> Unit) {
                 loadNextScreen()
             }
             Image(vectorResource(id = R.drawable.ic_instagram))
+            Spacer(modifier = Modifier.height(30.dp))
             Text(text = "Made by yours truly Victor Teka")
         }
     }
