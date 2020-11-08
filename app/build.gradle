@@ -69,5 +69,6 @@ dependencies {
     //Animation
     implementation "androidx.compose.animation:animation:1.0.0-alpha02"
 
-
+    //Exoplayer
+    implementation "com.google.android.exoplayer:exoplayer:2.11.8"
 }

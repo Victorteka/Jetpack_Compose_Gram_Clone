@@ -41,9 +41,7 @@ fun Search() {
             }
             Divider(modifier = Modifier.padding(vertical = 8.dp))
 
-            Box(modifier = Modifier.fillMaxSize(), gravity = ContentGravity.Center){
-                Text(text = "Search....", style = MaterialTheme.typography.h5)
-            }
+            Reels()
         }
     }
 }
